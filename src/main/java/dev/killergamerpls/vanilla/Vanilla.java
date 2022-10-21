@@ -5,9 +5,9 @@ import dev.killergamerpls.vanilla.command.LeaderboardCommand;
 import dev.killergamerpls.vanilla.command.PingCommand;
 import dev.killergamerpls.vanilla.command.StatsCommand;
 import dev.killergamerpls.vanilla.command.staff.WhitelistCommand;
+import dev.killergamerpls.vanilla.command.staff.flyboost.FlySpeedCommand;
 import dev.killergamerpls.vanilla.command.staff.pvp.PvPManager;
 import dev.killergamerpls.vanilla.command.staff.pvp.SetPvPCommand;
-import dev.killergamerpls.vanilla.command.staff.velocity.VelocityCommand;
 import dev.killergamerpls.vanilla.leaderboard.LeaderboardManager;
 import dev.killergamerpls.vanilla.listener.DataListener;
 import dev.killergamerpls.vanilla.listener.GeneralListener;
@@ -73,7 +73,7 @@ public class Vanilla extends JavaPlugin {
                 new WhitelistCommand(),
                 new PingCommand(),
                 new SetPvPCommand(),
-                new VelocityCommand()
+                new FlySpeedCommand()
         ).forEach(command-> Bukkit.getCommandMap().register(getName(), command));
         AnimationExecutor.init(Runtime.getRuntime().availableProcessors());
 
@@ -82,14 +82,6 @@ public class Vanilla extends JavaPlugin {
         this.ticker = new Ticker();
         this.animationManager = new AnimationManager();
 
-        //todo load thread for tick rage reduce, warning to place sleep thread
-        /*reduceLagThread = new ReduceLagThread();
-        int tick = Bukkit.getServer().getTPS().length;
-        if (tick <= 19){
-            reduceLagThread.start();
-        }else {
-            reduceLagThread.interrupt();
-        }*/
     }
 
     private void loadListener(){

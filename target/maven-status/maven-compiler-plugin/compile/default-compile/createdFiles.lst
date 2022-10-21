@@ -1,7 +1,6 @@
 dev\killergamerpls\vanilla\backend\data\PlayerData.class
 dev\killergamerpls\vanilla\utils\animations\utils\tick\Ticked.class
 dev\killergamerpls\vanilla\provider\VanillaBoard.class
-dev\killergamerpls\vanilla\command\staff\velocity\VelocityMenu.class
 dev\killergamerpls\vanilla\leaderboard\LeaderboardManager.class
 dev\killergamerpls\vanilla\utils\animations\utils\collection\AnimationList.class
 dev\killergamerpls\vanilla\command\LeaderboardCommand.class
@@ -35,6 +34,7 @@ dev\killergamerpls\vanilla\utils\animations\text\BurnAnimation.class
 dev\killergamerpls\vanilla\utils\animations\text\WaveAnimation.class
 dev\killergamerpls\vanilla\command\staff\GamemodeCommand.class
 dev\killergamerpls\vanilla\backend\sql\SQLInterface.class
+dev\killergamerpls\vanilla\command\staff\flyboost\FlySpeedCommand.class
 dev\killergamerpls\vanilla\utils\animations\utils\scheduler\RunnableTask.class
 dev\killergamerpls\vanilla\utils\animations\utils\tick\ITicked.class
 dev\killergamerpls\vanilla\utils\netherboard\bukkit\BPlayerBoard$ObjectiveMode.class
@@ -48,6 +48,7 @@ dev\killergamerpls\vanilla\leaderboard\LeaderboardManager$1.class
 dev\killergamerpls\vanilla\utils\animations\Animation.class
 dev\killergamerpls\vanilla\command\staff\pvp\PvPManager.class
 dev\killergamerpls\vanilla\utils\nametag\NameTagHandler.class
+dev\killergamerpls\vanilla\command\staff\flyboost\FlyBoostMenu.class
 dev\killergamerpls\vanilla\utils\ItemUtils.class
 dev\killergamerpls\vanilla\provider\NametagsAdapter.class
 dev\killergamerpls\vanilla\utils\animations\utils\AnimationExecutor.class
@@ -61,4 +62,3 @@ dev\killergamerpls\vanilla\listener\GeneralListener.class
 dev\killergamerpls\vanilla\utils\animations\utils\scheduler\S.class
 dev\killergamerpls\vanilla\utils\NMS\XSound.class
 dev\killergamerpls\vanilla\world\WorldManager.class
-dev\killergamerpls\vanilla\command\staff\velocity\VelocityCommand.class

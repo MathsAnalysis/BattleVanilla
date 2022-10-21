@@ -1,9 +1,11 @@
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\netherboard\bukkit\PlayerBoard.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\world\WorldRunnable.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\netherboard\Netherboard.java
+C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\flyboost\FlyBoostMenu.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\pvp\PvPManager.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\leaderboard\LeaderboardManager.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\text\TypewriterAnimation.java
+C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\flyboost\FlySpeedCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\backend\DatabaseManager.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\TextAnimation.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\WhitelistCommand.java
@@ -31,7 +33,6 @@ C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\kill
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\TeleportCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\LookUpCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\utils\tick\Ticker.java
-C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\velocity\VelocityMenu.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\utils\tick\ITicked.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\GamemodeCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\utils\scheduler\ConsumerTask.java
@@ -41,7 +42,6 @@ C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\kill
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\netherboard\bukkit\BPlayerBoard.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\luckperms\LuckPermsUtils.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\utils\animations\Animation.java
-C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\staff\velocity\VelocityCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\command\StatsCommand.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\leaderboard\LeaderboardMenu.java
 C:\Users\Carlo Maria Cardì\Desktop\Sources\BattleVanilla\src\main\java\dev\killergamerpls\vanilla\listener\DataListener.java
