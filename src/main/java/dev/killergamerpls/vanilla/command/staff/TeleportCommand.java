@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.command;
+package dev.killergamerpls.vanilla.command.staff;
 
 import dev.killergamerpls.vanilla.utils.CC;
 import org.bukkit.Bukkit;

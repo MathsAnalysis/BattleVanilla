@@ -4,9 +4,7 @@ import dev.killergamerpls.vanilla.backend.DatabaseManager;
 import dev.killergamerpls.vanilla.command.LeaderboardCommand;
 import dev.killergamerpls.vanilla.command.PingCommand;
 import dev.killergamerpls.vanilla.command.StatsCommand;
-import dev.killergamerpls.vanilla.command.staff.ResetStatsCommand;
-import dev.killergamerpls.vanilla.command.staff.RestrictCommand;
-import dev.killergamerpls.vanilla.command.staff.WhitelistCommand;
+import dev.killergamerpls.vanilla.command.staff.*;
 import dev.killergamerpls.vanilla.command.staff.flyboost.FlySpeedCommand;
 import dev.killergamerpls.vanilla.command.staff.pvp.PvPManager;
 import dev.killergamerpls.vanilla.command.staff.pvp.SetPvPCommand;
@@ -74,9 +72,12 @@ public class Vanilla extends JavaPlugin {
                 new LeaderboardCommand(),
                 new WhitelistCommand(),
                 new PingCommand(),
+                new TrollCommand(),
+                new GamemodeCommand(),
                 new SetPvPCommand(),
                 new FlySpeedCommand(),
                 new RestrictCommand(),
+                new LookUpCommand(),
                 new ResetStatsCommand()
         ).forEach(command-> Bukkit.getCommandMap().register(getName(), command));
         AnimationExecutor.init(Runtime.getRuntime().availableProcessors());

@@ -13,6 +13,6 @@ public class SpeedCommand extends Command {
     @Override
     public boolean execute(@NotNull CommandSender commandSender, @NotNull String s, @NotNull String[] strings) {
 
-
+        return false;
     }
 }

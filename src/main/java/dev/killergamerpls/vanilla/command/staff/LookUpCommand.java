@@ -18,7 +18,7 @@ public class LookUpCommand extends Command {
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
         Player target = Bukkit.getPlayer(args[0]);
         if (!sender.hasPermission(getPermission())){
-            sender.sendMessage(CC.translate("&cPermessi Insufficienti."));
+            sender.sendMessage(CC.translate("&cNon hai il permesso per poter eseguire questo comando!"));
             return true;
         }
 

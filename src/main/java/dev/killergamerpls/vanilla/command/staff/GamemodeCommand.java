@@ -21,7 +21,7 @@ public class GamemodeCommand extends Command {
     @Override
     public boolean execute(CommandSender sender, String label, String[] args) {
         if(!sender.hasPermission(getPermission())){
-            sender.sendMessage(CC.translate("&cPermessi Insufficienti"));
+            sender.sendMessage(CC.translate("&cNon hai il permesso per poter eseguire questo comando!"));
             return true;
         }
 
