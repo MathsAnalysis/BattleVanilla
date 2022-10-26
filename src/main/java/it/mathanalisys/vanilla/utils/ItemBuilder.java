@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils;
+package it.mathanalisys.vanilla.utils;
 
 import lombok.AllArgsConstructor;
 import org.bukkit.ChatColor;

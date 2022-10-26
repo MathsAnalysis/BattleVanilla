@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.animations;
+package it.mathanalisys.vanilla.utils.animations;
 
 public abstract class TextAnimation extends Animation {
 

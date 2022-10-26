@@ -1,7 +1,7 @@
-package dev.killergamerpls.vanilla.utils.animations.text;
+package it.mathanalisys.vanilla.utils.animations.text;
 
 import com.google.common.collect.Lists;
-import dev.killergamerpls.vanilla.utils.animations.TextAnimation;
+import it.mathanalisys.vanilla.utils.animations.TextAnimation;
 
 import java.util.Arrays;
 import java.util.List;

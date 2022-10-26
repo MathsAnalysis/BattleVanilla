@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.tick;
+package it.mathanalisys.vanilla.utils.animations.utils.tick;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;

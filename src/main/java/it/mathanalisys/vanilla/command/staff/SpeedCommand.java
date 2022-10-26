@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.command.staff;
+package it.mathanalisys.vanilla.command.staff;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

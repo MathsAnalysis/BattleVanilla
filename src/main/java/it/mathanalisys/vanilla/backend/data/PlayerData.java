@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.backend.data;
+package it.mathanalisys.vanilla.backend.data;
 
-import dev.killergamerpls.vanilla.Vanilla;
+import it.mathanalisys.vanilla.Vanilla;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;

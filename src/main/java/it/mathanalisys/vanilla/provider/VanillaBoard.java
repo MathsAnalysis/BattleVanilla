@@ -1,10 +1,10 @@
-package dev.killergamerpls.vanilla.provider;
+package it.mathanalisys.vanilla.provider;
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.utils.CC;
-import dev.killergamerpls.vanilla.utils.luckperms.LuckPermsUtils;
-import dev.killergamerpls.vanilla.utils.netherboard.Netherboard;
-import dev.killergamerpls.vanilla.utils.netherboard.bukkit.BPlayerBoard;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.luckperms.LuckPermsUtils;
+import it.mathanalisys.vanilla.utils.netherboard.Netherboard;
+import it.mathanalisys.vanilla.utils.netherboard.bukkit.BPlayerBoard;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;

@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.collection;
+package it.mathanalisys.vanilla.utils.animations.utils.collection;
 
 import java.util.ArrayList;
 import java.util.Collection;

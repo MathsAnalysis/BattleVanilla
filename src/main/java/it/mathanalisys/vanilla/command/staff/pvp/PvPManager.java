@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.command.staff.pvp;
+package it.mathanalisys.vanilla.command.staff.pvp;
 
 import lombok.Getter;
 import lombok.Setter;

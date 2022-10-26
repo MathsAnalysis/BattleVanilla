@@ -1,8 +1,8 @@
-package dev.killergamerpls.vanilla.listener;
+package it.mathanalisys.vanilla.listener;
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.utils.CC;
-import dev.killergamerpls.vanilla.utils.luckperms.LuckPermsUtils;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.luckperms.LuckPermsUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;

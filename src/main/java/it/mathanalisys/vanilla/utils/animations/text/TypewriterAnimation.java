@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.animations.text;
+package it.mathanalisys.vanilla.utils.animations.text;
 
-import dev.killergamerpls.vanilla.utils.animations.TextAnimation;
+import it.mathanalisys.vanilla.utils.animations.TextAnimation;
 import org.bukkit.ChatColor;
 
 import java.util.Arrays;

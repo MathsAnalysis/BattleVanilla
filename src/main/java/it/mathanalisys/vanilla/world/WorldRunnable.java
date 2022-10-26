@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.world;
+package it.mathanalisys.vanilla.world;
 
-import dev.killergamerpls.vanilla.Vanilla;
+import it.mathanalisys.vanilla.Vanilla;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Player;

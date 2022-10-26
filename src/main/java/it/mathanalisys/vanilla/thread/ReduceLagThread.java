@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.thread;
+package it.mathanalisys.vanilla.thread;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import org.bukkit.Bukkit;
 
 public class ReduceLagThread extends Thread{

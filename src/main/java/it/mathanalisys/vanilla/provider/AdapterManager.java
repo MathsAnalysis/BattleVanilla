@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.provider;
+package it.mathanalisys.vanilla.provider;
 
-import dev.killergamerpls.vanilla.Vanilla;
+import it.mathanalisys.vanilla.Vanilla;
 
 public class AdapterManager {
 

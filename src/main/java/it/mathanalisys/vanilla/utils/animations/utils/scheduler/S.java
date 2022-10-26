@@ -1,7 +1,7 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.scheduler;
+package it.mathanalisys.vanilla.utils.animations.utils.scheduler;
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.utils.animations.utils.AnimationExecutor;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.utils.animations.utils.AnimationExecutor;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.IllegalPluginAccessException;
 import org.bukkit.scheduler.BukkitTask;

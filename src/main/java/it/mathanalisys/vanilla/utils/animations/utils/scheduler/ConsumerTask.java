@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.scheduler;
+package it.mathanalisys.vanilla.utils.animations.utils.scheduler;
 
 import com.google.common.collect.Maps;
 import org.bukkit.Bukkit;

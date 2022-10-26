@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.nametag;
+package it.mathanalisys.vanilla.utils.nametag;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

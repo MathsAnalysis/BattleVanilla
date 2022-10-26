@@ -1,7 +1,7 @@
-package dev.killergamerpls.vanilla.leaderboard;
+package it.mathanalisys.vanilla.leaderboard;
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.utils.CC;
 import lombok.Getter;
 import lombok.Setter;
 import net.md_5.bungee.api.ChatColor;

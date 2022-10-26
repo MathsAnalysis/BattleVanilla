@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.netherboard;
+package it.mathanalisys.vanilla.utils.netherboard;
 
-import dev.killergamerpls.vanilla.utils.netherboard.bukkit.BPlayerBoard;
+import it.mathanalisys.vanilla.utils.netherboard.bukkit.BPlayerBoard;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Scoreboard;
 

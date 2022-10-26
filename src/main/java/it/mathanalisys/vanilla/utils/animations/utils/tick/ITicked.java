@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.tick;
+package it.mathanalisys.vanilla.utils.animations.utils.tick;
 
-import dev.killergamerpls.vanilla.Vanilla;
+import it.mathanalisys.vanilla.Vanilla;
 
 public interface ITicked {
 

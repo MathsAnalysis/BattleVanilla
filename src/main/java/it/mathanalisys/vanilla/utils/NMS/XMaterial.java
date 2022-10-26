@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.NMS;
+package it.mathanalisys.vanilla.utils.NMS;
 
 import com.google.common.base.Enums;
 import com.google.common.cache.Cache;

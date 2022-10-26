@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.command.staff.flyboost;
+package it.mathanalisys.vanilla.command.staff.flyboost;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

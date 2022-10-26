@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.netherboard.bukkit.nms;
+package it.mathanalisys.vanilla.utils.netherboard.bukkit.nms;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

@@ -1,9 +1,9 @@
-package dev.killergamerpls.vanilla.command.staff.flyboost;
+package it.mathanalisys.vanilla.command.staff.flyboost;
 
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.utils.CC;
-import dev.killergamerpls.vanilla.utils.ItemUtils;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.ItemUtils;
 import fr.minuskube.inv.ClickableItem;
 import fr.minuskube.inv.SmartInventory;
 import fr.minuskube.inv.content.InventoryContents;

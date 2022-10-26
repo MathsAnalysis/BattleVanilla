@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.luckperms;
+package it.mathanalisys.vanilla.utils.luckperms;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.cacheddata.CachedMetaData;
 import net.luckperms.api.model.group.Group;

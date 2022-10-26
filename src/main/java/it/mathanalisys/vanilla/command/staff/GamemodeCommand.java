@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.command.staff;
+package it.mathanalisys.vanilla.command.staff;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import org.apache.commons.lang3.text.WordUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;

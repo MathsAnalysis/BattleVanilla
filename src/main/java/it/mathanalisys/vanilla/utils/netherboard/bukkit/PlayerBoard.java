@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.utils.netherboard.bukkit;
+package it.mathanalisys.vanilla.utils.netherboard.bukkit;
 
 import java.util.Map;
 

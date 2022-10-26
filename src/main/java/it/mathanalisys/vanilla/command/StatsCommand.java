@@ -1,8 +1,8 @@
-package dev.killergamerpls.vanilla.command;
+package it.mathanalisys.vanilla.command;
 
-import dev.killergamerpls.vanilla.Vanilla;
-import dev.killergamerpls.vanilla.backend.data.PlayerData;
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.Vanilla;
+import it.mathanalisys.vanilla.backend.data.PlayerData;
+import it.mathanalisys.vanilla.utils.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;

@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.utils.animations.utils;
+package it.mathanalisys.vanilla.utils.animations.utils;
 
-import dev.killergamerpls.vanilla.utils.animations.utils.collection.AnimationList;
+import it.mathanalisys.vanilla.utils.animations.utils.collection.AnimationList;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

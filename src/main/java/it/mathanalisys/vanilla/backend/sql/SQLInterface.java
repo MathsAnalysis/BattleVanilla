@@ -1,4 +1,4 @@
-package dev.killergamerpls.vanilla.backend.sql;
+package it.mathanalisys.vanilla.backend.sql;
 
 import lombok.Getter;
 import lombok.Setter;

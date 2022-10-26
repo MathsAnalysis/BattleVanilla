@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.command.staff;
+package it.mathanalisys.vanilla.command.staff;
 
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.utils.CC;
 import net.minecraft.server.players.WhiteList;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

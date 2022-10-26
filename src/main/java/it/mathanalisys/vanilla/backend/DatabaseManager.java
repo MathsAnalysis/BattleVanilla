@@ -1,8 +1,8 @@
-package dev.killergamerpls.vanilla.backend;
+package it.mathanalisys.vanilla.backend;
 
-import dev.killergamerpls.vanilla.backend.data.PlayerData;
-import dev.killergamerpls.vanilla.backend.sql.SQLInterface;
-import dev.killergamerpls.vanilla.utils.CC;
+import it.mathanalisys.vanilla.backend.data.PlayerData;
+import it.mathanalisys.vanilla.backend.sql.SQLInterface;
+import it.mathanalisys.vanilla.utils.CC;
 import lombok.SneakyThrows;
 import org.bukkit.Bukkit;
 

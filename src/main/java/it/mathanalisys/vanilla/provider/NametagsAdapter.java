@@ -1,7 +1,7 @@
-package dev.killergamerpls.vanilla.provider;
+package it.mathanalisys.vanilla.provider;
 
-import dev.killergamerpls.vanilla.utils.luckperms.LuckPermsUtils;
-import dev.killergamerpls.vanilla.utils.nametag.NameTagHandler;
+import it.mathanalisys.vanilla.utils.luckperms.LuckPermsUtils;
+import it.mathanalisys.vanilla.utils.nametag.NameTagHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 

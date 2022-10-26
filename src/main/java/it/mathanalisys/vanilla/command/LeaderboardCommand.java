@@ -1,6 +1,6 @@
-package dev.killergamerpls.vanilla.command;
+package it.mathanalisys.vanilla.command;
 
-import dev.killergamerpls.vanilla.leaderboard.LeaderboardMenu;
+import it.mathanalisys.vanilla.leaderboard.LeaderboardMenu;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

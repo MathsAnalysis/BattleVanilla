@@ -1,8 +1,8 @@
-package dev.killergamerpls.vanilla.utils.animations.utils.tick;
+package it.mathanalisys.vanilla.utils.animations.utils.tick;
 
-import dev.killergamerpls.vanilla.utils.animations.utils.AnimationExecutor;
-import dev.killergamerpls.vanilla.utils.animations.utils.collection.AnimationList;
-import dev.killergamerpls.vanilla.utils.animations.utils.scheduler.S;
+import it.mathanalisys.vanilla.utils.animations.utils.AnimationExecutor;
+import it.mathanalisys.vanilla.utils.animations.utils.collection.AnimationList;
+import it.mathanalisys.vanilla.utils.animations.utils.scheduler.S;
 
 import java.util.concurrent.atomic.AtomicLong;
 
