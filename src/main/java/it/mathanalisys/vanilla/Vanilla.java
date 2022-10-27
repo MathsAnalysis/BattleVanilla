@@ -40,7 +40,6 @@ public class Vanilla extends JavaPlugin {
     private ReduceLagThread reduceLagThread;
     private InventoryManager inventoryManager;
 
-
     private AnimationManager animationManager;
     private Ticker ticker;
 
