@@ -19,7 +19,7 @@ public class PingCommand extends Command {
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] strings) {
         if (sender instanceof Player player){
             sender.sendMessage("");
-            sender.sendMessage(CC.translate("&cLatenza: &f" + player.getPing()));
+            sender.sendMessage(CC.translate("&dLatenza: &7" + player.getPing() + "ms"));
             sender.sendMessage("");
         }
         return false;

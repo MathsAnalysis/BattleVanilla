@@ -1,6 +1,7 @@
 package it.mathanalisys.vanilla.command.staff;
 
 import it.mathanalisys.vanilla.utils.CC;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -8,6 +9,8 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 public class TeleportCommand extends Command {
 
@@ -19,13 +22,22 @@ public class TeleportCommand extends Command {
 
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
-        if (!sender.hasPermission(getPermission())){
+        if (!sender.hasPermission(Objects.requireNonNull(getPermission()))){
             sender.sendMessage(CC.translate("&cPermessi Insufficienti"));
             return true;
         }
 
-        Player player = Bukkit.getPlayer(args[0]);
+        Player player = (Player)sender;
+        Player target = Bukkit.getPlayer(args[0]);
 
-        return false;
+        if (target == null){
+            sender.sendMessage(Component.text(CC.translate("Il giocatore richiesto non è online!")));
+            return true;
+        }
+
+        player.teleport(target.getLocation());
+
+
+        return true;
     }
 }

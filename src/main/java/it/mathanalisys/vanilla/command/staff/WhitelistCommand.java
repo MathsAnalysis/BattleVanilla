@@ -1,16 +1,15 @@
 package it.mathanalisys.vanilla.command.staff;
 
 import it.mathanalisys.vanilla.utils.CC;
-import net.minecraft.server.players.WhiteList;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_19_R1.CraftServer;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Objects;
 
 public class WhitelistCommand extends Command {
 
@@ -22,7 +21,7 @@ public class WhitelistCommand extends Command {
 
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
-        if (!sender.hasPermission(getPermission())){
+        if (!sender.hasPermission(Objects.requireNonNull(getPermission()))){
             sender.sendMessage(CC.translate("&cNon hai il permesso per poter eseguire questo comando!"));
             return true;
         }
@@ -59,7 +58,7 @@ public class WhitelistCommand extends Command {
                 }
                 player.setWhitelisted(true);
                 Bukkit.reloadWhitelist();
-                sender.sendMessage(CC.translate("&aHai aggiunto il giocatore &l" + player.getName() + " &acon successo!"));
+                sender.sendMessage(CC.translate("&7Hai aggiunto il giocatore &d" + player.getName() + " &7con successo!"));
             }
             case "remove"->{
                 OfflinePlayer player = Bukkit.getOfflinePlayer(args[1]);
@@ -75,22 +74,21 @@ public class WhitelistCommand extends Command {
 
                 player.setWhitelisted(false);
                 Bukkit.reloadWhitelist();
-                sender.sendMessage(CC.translate("&aHai rimosso il giocatore &l" + player.getName() + " &acon successo!"));
+                sender.sendMessage(CC.translate("&7Hai rimosso il giocatore &d" + player.getName() + " &7con successo!"));
             }
             case "list"->{
                 sender.sendMessage(CC.translate("&8&m-----------------------"));
-                sender.sendMessage(CC.translate("&4&lGiocatori nella whitelist: "));
+                sender.sendMessage(CC.translate("&5&lGiocatori nella whitelist: "));
                 sender.sendMessage("");
                 Bukkit.getServer().getWhitelistedPlayers().stream()
-                        .map(name-> CC.translate("&7- " + ChatColor.RED + name.getName().replace("<:>", "\n ")))
+                        .map(name-> CC.translate("&7● " + Color.PURPLE + Objects.requireNonNull(name.getName()).replace("<:>", "\n ")))
                         .forEach(sender::sendMessage);
                 sender.sendMessage("");
                 sender.sendMessage(CC.translate("&8&m-----------------------"));
             }
             case "clear"->{
-                WhiteList whitelist = ((CraftServer)Bukkit.getServer()).getHandle().i();
-                whitelist.getValues().clear();
-                sender.sendMessage(CC.translate("&cTutti i giocatori sono stati rimossi dalla whitelist!"));
+                Bukkit.getServer().getWhitelistedPlayers().clear();
+                sender.sendMessage(CC.translate("&aTutti i giocatori sono stati rimossi dalla whitelist!"));
             }
         }
 

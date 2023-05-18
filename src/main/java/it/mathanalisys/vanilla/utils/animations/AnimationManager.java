@@ -1,9 +1,8 @@
 package it.mathanalisys.vanilla.utils.animations;
 
 import it.mathanalisys.vanilla.utils.CC;
-import dev.killergamerpls.vanilla.utils.animations.text.*;
-import it.mathanalisys.vanilla.utils.animations.utils.tick.Ticked;
 import it.mathanalisys.vanilla.utils.animations.text.*;
+import it.mathanalisys.vanilla.utils.animations.utils.tick.Ticked;
 import org.apache.commons.lang3.Validate;
 
 import java.util.HashMap;

@@ -26,9 +26,9 @@ public class VanillaBoard extends BukkitRunnable {
         List<String> board = new ArrayList<>();
 
         if (bPlayerBoard == null) {
-            bPlayerBoard = Netherboard.instance().createBoard(player, CC.translate("&4&lVANILLA"));
+            bPlayerBoard = Netherboard.instance().createBoard(player, CC.translate("&5&lVANILLA"));
         }
-        bPlayerBoard.setName(Vanilla.get().getAnimationManager().parseTextAnimations("<#ANIM:wave:&4&l,&c&l>VANILLA</#ANIM>"));
+        bPlayerBoard.setName(Vanilla.get().getAnimationManager().parseTextAnimations("<#ANIM:wave:&5&l,&d&l>VANILLA</#ANIM>"));
 
         ZoneId zoneId = ZoneId.of("Europe/Rome");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -43,14 +43,14 @@ public class VanillaBoard extends BukkitRunnable {
         board.add("&6&8&m--------------------");
         board.add("&7&o" + formatter.format(date) + " " + dtf.format(now));
         board.add("&d&d&3&l");
-        board.add("&cNome: &f" + player.getName());
-        board.add("&cGiocatori Online: &f" + Bukkit.getServer().getOnlinePlayers().size());
+        board.add("&dNome: &7" + player.getName());
+        board.add("&dGiocatori Online: &7" + Bukkit.getServer().getOnlinePlayers().size());
         board.add("&C&d&4&3");
-        board.add("&cLatenza: &f" + player.spigot().getPing() + "ms");
-        board.add("&cRank: &f" + LuckPermsUtils.getPrefix(player));
+        board.add("&dLatenza: &7" + player.spigot().getPing() + "ms");
+        board.add("&dRank: &7" + LuckPermsUtils.getPrefix(player));
         board.add("&C&d&3");
-        board.add("&cCoordinate: &f" + x + ", " + y + ", " + z);
-        board.add("&cOrario: &f" + (Vanilla.get().getWorldManager().isDay() ? "Giorno" : "Notte"));
+        board.add("&dCoordinate: &7" + x + ", " + y + ", " + z);
+        board.add("&dOrario: &7" + (Vanilla.get().getWorldManager().isDay() ? "Giorno" : "Notte"));
         board.add("&8&m--------------------");
 
 

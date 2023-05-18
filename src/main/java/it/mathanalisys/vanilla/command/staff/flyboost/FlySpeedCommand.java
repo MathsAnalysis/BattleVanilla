@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Objects;
 
 public class FlySpeedCommand extends Command {
 
@@ -19,7 +20,7 @@ public class FlySpeedCommand extends Command {
 
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
-        if (!sender.hasPermission(getPermission())) {
+        if (!sender.hasPermission(Objects.requireNonNull(getPermission()))) {
             sender.sendMessage(CC.translate("&cPermessi Insufficienti."));
             return true;
         }

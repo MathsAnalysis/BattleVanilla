@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.util.List;
+import java.util.Objects;
 
 public class GamemodeCommand extends Command {
 
@@ -20,7 +21,7 @@ public class GamemodeCommand extends Command {
 
     @Override
     public boolean execute(CommandSender sender, String label, String[] args) {
-        if(!sender.hasPermission(getPermission())){
+        if(!sender.hasPermission(Objects.requireNonNull(getPermission()))){
             sender.sendMessage(CC.translate("&cNon hai il permesso per poter eseguire questo comando!"));
             return true;
         }

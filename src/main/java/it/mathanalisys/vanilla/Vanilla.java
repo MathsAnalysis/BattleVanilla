@@ -1,10 +1,11 @@
 package it.mathanalisys.vanilla;
 
+import fr.minuskube.inv.InventoryManager;
 import it.mathanalisys.vanilla.backend.DatabaseManager;
 import it.mathanalisys.vanilla.command.LeaderboardCommand;
 import it.mathanalisys.vanilla.command.PingCommand;
 import it.mathanalisys.vanilla.command.StatsCommand;
-import dev.killergamerpls.vanilla.command.staff.*;
+import it.mathanalisys.vanilla.command.staff.*;
 import it.mathanalisys.vanilla.command.staff.flyboost.FlySpeedCommand;
 import it.mathanalisys.vanilla.command.staff.pvp.PvPManager;
 import it.mathanalisys.vanilla.command.staff.pvp.SetPvPCommand;
@@ -17,8 +18,6 @@ import it.mathanalisys.vanilla.utils.animations.AnimationManager;
 import it.mathanalisys.vanilla.utils.animations.utils.AnimationExecutor;
 import it.mathanalisys.vanilla.utils.animations.utils.tick.Ticker;
 import it.mathanalisys.vanilla.world.WorldManager;
-import fr.minuskube.inv.InventoryManager;
-import it.mathanalisys.vanilla.command.staff.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
@@ -54,6 +53,13 @@ public class Vanilla extends JavaPlugin {
         loadOther();
     }
 
+    @Override
+    public void onDisable() {
+        if (this.databaseManager.getClient() != null){
+            this.databaseManager.getClient().close();
+        }
+    }
+
     private void loadManager(){
         this.leaderboardManager = new LeaderboardManager(this);
         this.worldManager = new WorldManager();
@@ -75,10 +81,10 @@ public class Vanilla extends JavaPlugin {
                 new TrollCommand(),
                 new GamemodeCommand(),
                 new SetPvPCommand(),
+                new TeleportCommand(),
                 new FlySpeedCommand(),
                 new RestrictCommand(),
-                new LookUpCommand(),
-                new ResetStatsCommand()
+                new LookUpCommand()
         ).forEach(command-> Bukkit.getCommandMap().register(getName(), command));
         AnimationExecutor.init(Runtime.getRuntime().availableProcessors());
 
@@ -98,7 +104,6 @@ public class Vanilla extends JavaPlugin {
 
     private void loadDatabase(){
         this.databaseManager = new DatabaseManager();
-        this.databaseManager.startDatabase();
     }
 
     public static Vanilla get(){

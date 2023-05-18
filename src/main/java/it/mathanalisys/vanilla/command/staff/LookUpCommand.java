@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Objects;
+
 public class LookUpCommand extends Command {
 
     public LookUpCommand() {
@@ -17,7 +19,7 @@ public class LookUpCommand extends Command {
     @Override
     public boolean execute(@NotNull CommandSender sender, @NotNull String s, @NotNull String[] args) {
         Player target = Bukkit.getPlayer(args[0]);
-        if (!sender.hasPermission(getPermission())){
+        if (!sender.hasPermission(Objects.requireNonNull(getPermission()))){
             sender.sendMessage(CC.translate("&cNon hai il permesso per poter eseguire questo comando!"));
             return true;
         }
