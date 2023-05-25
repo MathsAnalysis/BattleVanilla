@@ -1,18 +1,14 @@
 package it.mathanalisys.vanilla.backend;
 
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.mongodb.client.model.Filters;
 import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.utils.thread.Tasks;
 import lombok.Data;
 import org.bson.Document;
 import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashMap;
 import java.util.UUID;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Data
 @SuppressWarnings("all")
@@ -60,7 +56,6 @@ public class PlayerData {
             this.kills = document.getInteger("kills");
             this.deaths = document.getInteger("deaths");
             this.blockBroken = document.getInteger("blockBroken");
-            this.goldenAppleEaten = document.getInteger("goldenAppleEaten");
         }else {
             Vanilla.get().getDatabaseManager().getPlayers().insertOne(new Document()
                     .append("uuid", this.uuid.toString())

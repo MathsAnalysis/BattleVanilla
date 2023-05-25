@@ -35,7 +35,6 @@ public class LeaderboardManager {
             reloadLeaderboard("deaths", "Morti");
             reloadLeaderboard("mobKills", "Mob Uccisi");
             reloadLeaderboard("blockBroken", "Blocchi Rotti");
-            reloadLeaderboard("goldenAppleEaten", "Golden Apple Mangiate");
         }
 
         new BukkitRunnable() {
@@ -45,9 +44,8 @@ public class LeaderboardManager {
                     case 1 -> reloadLeaderboard("kills", "Top Uccisioni");
                     case 2 -> reloadLeaderboard("deaths", "Top Morti");
                     case 3 -> reloadLeaderboard("mobKills", "Top Mob Uccisi ");
-                    case 4-> reloadLeaderboard("blockBroken", "Top Blocchi Rotti");
-                    case 5->{
-                        reloadLeaderboard("goldenAppleEaten", "Top Golden Apple Eaten");
+                    case 4-> {
+                        reloadLeaderboard("blockBroken", "Top Blocchi Rotti");
                         index = 0;
                     }
                 }
