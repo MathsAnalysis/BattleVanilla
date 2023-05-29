@@ -12,6 +12,6 @@ public class WorldManager {
     private boolean day = false;
 
     public WorldManager(){
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(Vanilla.get(), new WorldRunnable(), 0L, 1L);
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Vanilla.get(), new WorldRunnable(), 0L, 1L);
     }
 }

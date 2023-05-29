@@ -1,14 +1,11 @@
 package it.mathanalisys.vanilla.listener;
 
-import com.mongodb.lang.Nullable;
-import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.backend.DatabaseUtils;
 import it.mathanalisys.vanilla.backend.PlayerData;
 import it.mathanalisys.vanilla.utils.CC;
 import it.mathanalisys.vanilla.utils.thread.Tasks;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -61,7 +58,7 @@ public class DataListener implements Listener {
             Tasks.runAsync(() -> DatabaseUtils.updateStats(killerData.getUuid(), "kills", killerData.getKills()));
 
             event.deathMessage(Component.text(CC.translate(Color.GREEN + player.getName() + " &7è stato ucciso nelle grinfie di &c" + killer.getName())));
-        } else {event.deathMessage(Component.text(CC.translate(Color.PURPLE + player.getName() + " &7è morto per cause sconosciute!")));}
+        } else {event.deathMessage(Component.text(Color.PURPLE + player.getName() + CC.translate(" &7è morto per causa di " + event.getEntity().getKiller().getName() + "!")));}
 
 
     }

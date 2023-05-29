@@ -19,7 +19,7 @@ public class GeneralListener implements Listener {
     public void onChatting(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         LuckPermsUtils.getPrefix(player);
-        event.setFormat(CC.translate(" " + LuckPermsUtils.getRankColor(player) + player.getName() + " &8» &7" + event.getMessage()));
+        event.setFormat(CC.translate(LuckPermsUtils.getRankColor(player) + player.getName() + " &8» &7" + event.getMessage()));
     }
 
     @EventHandler

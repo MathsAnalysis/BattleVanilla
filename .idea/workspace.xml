@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleVanilla.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleVanilla.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/Program Files/Maven" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Program Files/Maven" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2QIlCK9HyxQPkz7r8hB1iAFUno9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/CRDCLM01S30C351B/Desktop/Sources/BattleVanilla&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="" />
       <created>1683059181910</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683059181910</updated>
+      <workItem from="1685048849030" duration="210000" />
+      <workItem from="1685106548680" duration="1773000" />
+      <workItem from="1685189431844" duration="768000" />
+      <workItem from="1685203983224" duration="578000" />
+      <workItem from="1685211140697" duration="60000" />
+      <workItem from="1685230935473" duration="57000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
