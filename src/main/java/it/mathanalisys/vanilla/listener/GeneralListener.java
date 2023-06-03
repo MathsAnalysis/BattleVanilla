@@ -24,8 +24,12 @@ public class GeneralListener implements Listener {
 
     @EventHandler
     public void setPvPOnServer(EntityDamageByEntityEvent event) {
-        if (event.getEntity().getType() == EntityType.PLAYER) {
-            event.setCancelled(!Vanilla.get().getPvPManager().isPvP());
+        if (!Vanilla.get().getPvPManager().isPvP()){
+            if (event.getEntity().getType() == EntityType.PLAYER && event.getDamager().getType() == EntityType.PLAYER) {
+                event.setCancelled(true);
+            }
+        }else {
+            event.setCancelled(false);
         }
     }
 

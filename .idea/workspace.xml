@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleVanilla.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleVanilla.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/world/WorldRunnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/world/WorldRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +67,7 @@
       <workItem from="1685203983224" duration="578000" />
       <workItem from="1685211140697" duration="60000" />
       <workItem from="1685230935473" duration="57000" />
+      <workItem from="1685760531526" duration="439000" />
     </task>
     <servers />
   </component>
