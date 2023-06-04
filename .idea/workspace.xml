@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/pvp/SetPvPCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +63,7 @@
       <workItem from="1685211140697" duration="60000" />
       <workItem from="1685230935473" duration="57000" />
       <workItem from="1685760531526" duration="439000" />
+      <workItem from="1685882866832" duration="188000" />
     </task>
     <servers />
   </component>

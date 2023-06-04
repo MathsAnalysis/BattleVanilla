@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 
@@ -26,6 +27,17 @@ public class GeneralListener implements Listener {
     public void setPvPOnServer(EntityDamageByEntityEvent event) {
         if (!Vanilla.get().getPvPManager().isPvP()){
             if (event.getEntity().getType() == EntityType.PLAYER && event.getDamager().getType() == EntityType.PLAYER) {
+                event.setCancelled(true);
+            }
+        }else {
+            event.setCancelled(false);
+        }
+    }
+
+    @EventHandler
+    public void onShootPlayer(ProjectileHitEvent event) {
+        if (!Vanilla.get().getPvPManager().isPvP()){
+            if ((event.getEntity().getType() == EntityType.PLAYER) && (event.getEntity().getShooter() instanceof Player)) {
                 event.setCancelled(true);
             }
         }else {
