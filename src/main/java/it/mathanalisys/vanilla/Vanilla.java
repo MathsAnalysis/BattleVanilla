@@ -14,6 +14,7 @@ import it.mathanalisys.vanilla.listener.DataListener;
 import it.mathanalisys.vanilla.listener.GeneralListener;
 import it.mathanalisys.vanilla.provider.AdapterManager;
 import it.mathanalisys.vanilla.thread.ReduceLagThread;
+import it.mathanalisys.vanilla.utils.ConfigFile;
 import it.mathanalisys.vanilla.utils.animations.AnimationManager;
 import it.mathanalisys.vanilla.utils.animations.utils.AnimationExecutor;
 import it.mathanalisys.vanilla.utils.animations.utils.tick.Ticker;
@@ -42,6 +43,8 @@ public class Vanilla extends JavaPlugin {
     private AnimationManager animationManager;
     private Ticker ticker;
 
+    private ConfigFile scoreboardConfig;
+
 
     @Override
     public void onEnable() {
@@ -61,6 +64,7 @@ public class Vanilla extends JavaPlugin {
     }
 
     private void loadManager(){
+        this.scoreboardConfig = new ConfigFile(this, "scoreboard.yml");
         this.leaderboardManager = new LeaderboardManager(this);
         this.worldManager = new WorldManager();
         this.adapterManager = new AdapterManager();

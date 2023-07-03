@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="" />
+    <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/ConfigFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scoreboard.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/Vanilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/Vanilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/AdapterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/AdapterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/VanillaBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/VanillaBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/NMS/XMaterial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/NMS/XSound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/netherboard/Netherboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/netherboard/bukkit/BPlayerBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/netherboard/bukkit/PlayerBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/netherboard/bukkit/nms/NMS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/Vanilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/Vanilla.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/AdapterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/AdapterManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/VanillaBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/VanillaBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XMaterial$Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XMaterial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XSound$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XSound$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XSound$Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XSound$Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/NMS/XSound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/Netherboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/bukkit/BPlayerBoard$ObjectiveMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/bukkit/BPlayerBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/bukkit/PlayerBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/bukkit/nms/NMS$Version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/netherboard/bukkit/nms/NMS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +47,13 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,6 +112,9 @@
       <workItem from="1685894854478" duration="13000" />
       <workItem from="1686387453461" duration="1422000" />
       <workItem from="1686743189021" duration="7000" />
+      <workItem from="1687193578449" duration="285000" />
+      <workItem from="1687249427243" duration="44000" />
+      <workItem from="1688369931631" duration="1891000" />
     </task>
     <servers />
   </component>
