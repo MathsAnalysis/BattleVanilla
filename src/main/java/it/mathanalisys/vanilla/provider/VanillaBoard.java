@@ -25,8 +25,8 @@ public class VanillaBoard extends BukkitRunnable {
 
     public void scoreboardUpdate(FastBoard board){
         List<String> lines = Vanilla.get().getScoreboardConfig().getStringList("Scoreboard.Lines");
-        board.updateLines(CC.translateStrings(lines));
-        board.updateTitle(Vanilla.get().getScoreboardConfig().getString("Scoreboard.Title"));
+        board.updateLines(CC.translateStrings(board.getPlayer(), lines));
+        board.updateTitle(CC.translate(board.getPlayer(), Vanilla.get().getScoreboardConfig().getString("Scoreboard.Title")));
     }
 
 }

@@ -11,7 +11,7 @@ public class PlaceholderHook extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getIdentifier() {
-        return "Vanilla";
+        return "vanilla";
     }
 
     @Override

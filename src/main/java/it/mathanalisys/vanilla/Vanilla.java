@@ -109,6 +109,8 @@ public class Vanilla extends JavaPlugin {
         this.ticker = new Ticker();
         this.animationManager = new AnimationManager();
 
+        this.vanillaBoard = new VanillaBoard();
+        this.vanillaBoard.runTaskTimer(this, 0L, 20L);
     }
 
     private void loadListener(){

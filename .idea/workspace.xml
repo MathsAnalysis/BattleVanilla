@@ -5,48 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0772205-adb9-447a-8c9e-c60cd04ba0a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/hook/PlaceholderHook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/Vanilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/Vanilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/backend/PlayerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/backend/PlayerData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/LookUpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/LookUpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/TeleportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/TeleportCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/TrollCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/command/staff/TrollCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/leaderboard/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/leaderboard/LeaderboardMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/DataListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/listener/GeneralListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/hook/PlaceholderHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/hook/PlaceholderHook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/AdapterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/AdapterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/NametagsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/NametagsAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/VanillaBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/provider/VanillaBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/CC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/CC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/ConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/ItemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/ItemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/PlayerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/PlayerUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/nametag/NameTagHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/nametag/NameTagHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/thread/Tasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/mathanalisys/vanilla/utils/thread/Tasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/Vanilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/Vanilla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/backend/PlayerData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/backend/PlayerData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/LookUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/LookUpCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/TeleportCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/TeleportCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/TrollCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/command/staff/TrollCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/leaderboard/LeaderboardMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/leaderboard/LeaderboardMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/DataListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/listener/GeneralListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/AdapterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/AdapterManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/NametagsAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/NametagsAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/VanillaBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/provider/VanillaBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/CC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/CC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/ItemUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/ItemUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/PlayerUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/PlayerUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/nametag/NameTagHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/nametag/NameTagHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/thread/Tasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/it/mathanalisys/vanilla/utils/thread/Tasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-Vanilla-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +25,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="2316" />
+    <option name="totalTimeSeconds" value="2579" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -140,6 +107,8 @@
       <workItem from="1688369931631" duration="1891000" />
       <workItem from="1701347370988" duration="1558000" />
       <workItem from="1701349672072" duration="899000" />
+      <workItem from="1701350618745" duration="93000" />
+      <workItem from="1701350746435" duration="337000" />
     </task>
     <servers />
   </component>
