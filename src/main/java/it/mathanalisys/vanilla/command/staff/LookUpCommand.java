@@ -32,7 +32,7 @@ public class LookUpCommand extends Command {
 
         sender.sendMessage("&8&m--------------");
         sender.sendMessage(CC.translate((target.isOp() ? "&4&lAttento &cquesto giocatore possiede tutti i permessi" : "&cQuesto giocatore non possiede permessi d' amministratore")));
-        sender.sendMessage(CC.translate("&cLatenza: &f" + target.spigot().getPing()));
+        sender.sendMessage(CC.translate("&cLatenza: &f" + target.getPing()));
         sender.sendMessage(CC.translate("&cHosting Provider: &f" +  target.getServer().getName()));
         sender.sendMessage("&8&m--------------");
 

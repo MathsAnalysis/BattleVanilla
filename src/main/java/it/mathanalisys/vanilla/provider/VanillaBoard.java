@@ -3,20 +3,24 @@ package it.mathanalisys.vanilla.provider;
 import fr.mrmicky.fastboard.FastBoard;
 import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.utils.CC;
-import org.bukkit.Bukkit;
+import lombok.Getter;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
+@Getter
 public class VanillaBoard extends BukkitRunnable {
 
+    private final Map<UUID, FastBoard> boards = new HashMap<>();
 
     @Override
     public void run() {
-        Bukkit.getServer().getOnlinePlayers().forEach(player -> {
-            FastBoard board = new FastBoard(player);
+        for (FastBoard board : this.boards.values()) {
             scoreboardUpdate(board);
-        });
+        }
     }
 
     public void scoreboardUpdate(FastBoard board){
@@ -24,4 +28,5 @@ public class VanillaBoard extends BukkitRunnable {
         board.updateLines(CC.translateStrings(lines));
         board.updateTitle(Vanilla.get().getScoreboardConfig().getString("Scoreboard.Title"));
     }
+
 }

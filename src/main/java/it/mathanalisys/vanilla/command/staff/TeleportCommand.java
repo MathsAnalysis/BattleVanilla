@@ -1,7 +1,6 @@
 package it.mathanalisys.vanilla.command.staff;
 
 import it.mathanalisys.vanilla.utils.CC;
-import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -9,7 +8,6 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 public class TeleportCommand extends Command {
@@ -31,7 +29,7 @@ public class TeleportCommand extends Command {
         Player target = Bukkit.getPlayer(args[0]);
 
         if (target == null){
-            sender.sendMessage(Component.text(CC.translate("Il giocatore richiesto non è online!")));
+            sender.sendMessage(CC.translate("Il giocatore richiesto non è online!"));
             return true;
         }
 

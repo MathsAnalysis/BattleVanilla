@@ -1,6 +1,7 @@
 package it.mathanalisys.vanilla.utils.nametag;
 
 import it.mathanalisys.vanilla.utils.CC;
+import lombok.experimental.UtilityClass;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -8,11 +9,12 @@ import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Team;
 
+@UtilityClass
 public class NameTagHandler {
 
-	private static final String PREFIX = "nt_";
+	private final String PREFIX = "nt_";
 
-	public static void color(Player player, Player other, String color, boolean showHealth) {
+	public void color(Player player, Player other, String color, boolean showHealth) {
 		Team team = player.getScoreboard().getTeam(PREFIX + color);
 
 		if (team == null) {
@@ -38,12 +40,12 @@ public class NameTagHandler {
 			}
 
 			objective.setDisplaySlot(DisplaySlot.BELOW_NAME);
-			objective.setDisplayName(ChatColor.RED + StringEscapeUtils.unescapeJava("\u2764"));
+			objective.setDisplayName(ChatColor.RED + StringEscapeUtils.unescapeJava("❤"));
 			objective.getScore(other.getName()).setScore((int) Math.floor(other.getHealth()));
 		}
 	}
 
-	public static void lobby(Player player, Player other) {
+	public void lobby(Player player, Player other) {
 		if (player == null || other == null) {
 			return;
 		}
@@ -53,7 +55,7 @@ public class NameTagHandler {
 		}
 	}
 
-	public static void reset(Player player, Player other) {
+	public void reset(Player player, Player other) {
 		if (player == null || other == null) {
 			return;
 		}
@@ -63,7 +65,7 @@ public class NameTagHandler {
 		}
 	}
 
-	public static void removeHealthDisplay(Player player) {
+	public void removeHealthDisplay(Player player) {
 		if (player == null) {
 			return;
 		}

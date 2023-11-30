@@ -27,6 +27,7 @@ it\mathanalisys\vanilla\utils\animations\utils\tick\ITicked.class
 it\mathanalisys\vanilla\backend\DatabaseManager.class
 it\mathanalisys\vanilla\command\staff\RestrictCommand.class
 it\mathanalisys\vanilla\utils\animations\utils\AnimationExecutor.class
+it\mathanalisys\vanilla\hook\PlaceholderHook.class
 it\mathanalisys\vanilla\utils\CC.class
 it\mathanalisys\vanilla\command\staff\pvp\PvPManager.class
 it\mathanalisys\vanilla\leaderboard\LeaderboardManager.class

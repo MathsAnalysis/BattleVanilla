@@ -4,6 +4,7 @@ import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.utils.CC;
 import it.mathanalisys.vanilla.utils.luckperms.LuckPermsUtils;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -49,16 +50,22 @@ public class GeneralListener implements Listener {
     public void onPlayerAsyncConnection(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (Bukkit.hasWhitelist()) {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder
-                    .append("&4Tu non puoi accedere a questo server è privato :(\n")
-                    .append("&4Attento che chiamo il 118 eheheh!\n")
-                    .append("4Oh davvero guardo che lo chiamo");
-            if (!player.isWhitelisted()) {
-                event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, Component.text(CC.translate(stringBuilder.toString())));
+            TextComponent message = Component.text(CC.translate(
+                            "&4Tu non puoi accedere a questo server è privato :(\n" +
+                            "&4Attento che chiamo il 118 eheheh!\n" +
+                            "4Oh davvero guardo che lo chiamo"
+            ));
+
+
+            boolean isWhitelisted = Bukkit.getWhitelistedPlayers().contains(player);
+
+
+            if (!isWhitelisted) {
+                event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, message.content());
             } else {
                 event.allow();
             }
+
         }
     }
 }

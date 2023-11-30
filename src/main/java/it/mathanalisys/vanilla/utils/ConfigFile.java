@@ -11,21 +11,21 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class ConfigFile extends YamlConfiguration {
 
-    @Getter
     private final File file;
 
     public ConfigFile(JavaPlugin plugin, String name) {
         this.file = new File(plugin.getDataFolder(), name);
 
-        if(!this.file.exists()) {
+        if (!this.file.exists()) {
             plugin.saveResource(name, false);
         }
 
         try {
             this.load(this.file);
-        } catch(IOException | InvalidConfigurationException e) {
+        } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
     }
@@ -33,7 +33,7 @@ public class ConfigFile extends YamlConfiguration {
     public void save() {
         try {
             this.save(this.file);
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

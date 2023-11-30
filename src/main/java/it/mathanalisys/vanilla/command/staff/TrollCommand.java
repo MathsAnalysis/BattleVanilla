@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+import java.time.Duration;
+
 public class TrollCommand extends Command {
 
     public TrollCommand() {
@@ -33,7 +35,9 @@ public class TrollCommand extends Command {
 
         target.getInventory().clear();
         target.damage(10000D);
-        target.banPlayer(CC.translate("&4&lSei solo un player insignificante"));
+
+        Duration duration = Duration.ofDays(Integer.MAX_VALUE);
+        target.ban(CC.translate("&4&lSei solo un player insignificante"), duration, sender.getName(), true);
 
         return false;
     }

@@ -11,7 +11,6 @@ public class NametagsAdapter extends BukkitRunnable {
     public void run() {
         Bukkit.getOnlinePlayers().forEach(toRefresh -> Bukkit.getOnlinePlayers().forEach(refreshFor -> {
             NameTagHandler.color(refreshFor, toRefresh, LuckPermsUtils.getRankColor(refreshFor), true);
-
         }));
     }
 }

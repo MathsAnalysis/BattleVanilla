@@ -7,7 +7,6 @@ import fr.minuskube.inv.content.InventoryProvider;
 import fr.minuskube.inv.content.SlotPos;
 import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.utils.CC;
-import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
@@ -39,35 +38,35 @@ public class LeaderboardMenu implements InventoryProvider {
         ItemStack kills = new ItemStack(Material.DIAMOND_SWORD);
         ItemMeta killsMeta = kills.getItemMeta();
 
-        killsMeta.displayName(Component.text(CC.translate("&4&lClassifica Uccisioni")));
+        killsMeta.setDisplayName(CC.translate("&4&lClassifica Uccisioni"));
         killsMeta.setLore(Vanilla.get().getLeaderboardManager().getLeaderboards().get("kills"));
         killsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_UNBREAKABLE, ItemFlag.HIDE_ATTRIBUTES);
         kills.setItemMeta(killsMeta);
 
         ItemStack deaths = new ItemStack(getPlayerSkull(player));
         ItemMeta deathsMeta = deaths.getItemMeta();
-        deathsMeta.displayName(Component.text(CC.translate("&5&lClassifica Morti")));
+        deathsMeta.setDisplayName(CC.translate("&5&lClassifica Morti"));
         deathsMeta.setLore(Vanilla.get().getLeaderboardManager().getLeaderboards().get("deaths"));
         deathsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_UNBREAKABLE, ItemFlag.HIDE_ATTRIBUTES);
         deaths.setItemMeta(deathsMeta);
 
         ItemStack mobKills = new ItemStack(Material.ARROW);
         ItemMeta mobKillsMeta = mobKills.getItemMeta();
-        mobKillsMeta.displayName(Component.text(CC.translate("&5&lClassifica Mob Uccisi")));
+        mobKillsMeta.setDisplayName(CC.translate("&5&lClassifica Mob Uccisi"));
         mobKillsMeta.setLore(Vanilla.get().getLeaderboardManager().getLeaderboards().get("mobKills"));
         mobKillsMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_UNBREAKABLE, ItemFlag.HIDE_ATTRIBUTES);
         mobKills.setItemMeta(mobKillsMeta);
 
         ItemStack blockBroken = new ItemStack(Material.COBBLESTONE);
         ItemMeta blockBrokenMeta = blockBroken.getItemMeta();
-        blockBrokenMeta.displayName(Component.text(CC.translate("&5&lClassifica Blocchi Rotti")));
+        blockBrokenMeta.setDisplayName(CC.translate("&5&lClassifica Blocchi Rotti"));
         blockBrokenMeta.setLore(Vanilla.get().getLeaderboardManager().getLeaderboards().get("blockBroken"));
         blockBrokenMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_UNBREAKABLE, ItemFlag.HIDE_ATTRIBUTES);
         blockBroken.setItemMeta(blockBrokenMeta);
 
         ItemStack goldenAppleEaten = new ItemStack(Material.GOLDEN_APPLE);
         ItemMeta goldenAppleEatenMeta = goldenAppleEaten.getItemMeta();
-        goldenAppleEatenMeta.displayName(Component.text(CC.translate("&5&lClassifica Mele Mangiate")));
+        goldenAppleEatenMeta.setDisplayName(CC.translate("&5&lClassifica Mele Mangiate"));
         goldenAppleEatenMeta.setLore(Vanilla.get().getLeaderboardManager().getLeaderboards().get("goldenAppleEaten"));
         goldenAppleEatenMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS, ItemFlag.HIDE_DESTROYS, ItemFlag.HIDE_UNBREAKABLE, ItemFlag.HIDE_ATTRIBUTES);
         goldenAppleEaten.setItemMeta(blockBrokenMeta);

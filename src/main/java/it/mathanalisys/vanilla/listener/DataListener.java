@@ -1,10 +1,11 @@
 package it.mathanalisys.vanilla.listener;
 
+import fr.mrmicky.fastboard.FastBoard;
+import it.mathanalisys.vanilla.Vanilla;
 import it.mathanalisys.vanilla.backend.DatabaseUtils;
 import it.mathanalisys.vanilla.backend.PlayerData;
 import it.mathanalisys.vanilla.utils.CC;
 import it.mathanalisys.vanilla.utils.thread.Tasks;
-import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.entity.Entity;
@@ -24,27 +25,38 @@ public class DataListener implements Listener {
     public void onJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
 
-        event.joinMessage(null);
+        event.setJoinMessage(null);
 
         player.sendMessage("");
         player.sendMessage(CC.translate("&7Hey, ciao benvenuto nella mia Vanilla &d" + player.getName()));
         player.sendMessage("");
 
-        if(Bukkit.getOnlinePlayers().size() > 0){
-            Bukkit.getServer().broadcast(Component.text(CC.translate("&7Date il benvenuto al giocatore &d" + player.getName())));
+        if(!Bukkit.getOnlinePlayers().isEmpty()){
+            Bukkit.getServer().broadcastMessage(CC.translate("&7Date il benvenuto al giocatore &d" + player.getName()));
         }
+
+        FastBoard fastBoard = new FastBoard(player);
+        Vanilla.get().getVanillaBoard().getBoards().put(player.getUniqueId(), fastBoard);
+        fastBoard.updateTitle(CC.translate(Vanilla.get().getScoreboardConfig().getString("Scoreboard.Title")));
+
     }
 
     @EventHandler
     public void onQuitPlayer(PlayerQuitEvent event){
         Player player = event.getPlayer();
-        event.quitMessage(null);
+        event.setQuitMessage(null);
         PlayerData.getDatas().remove(player.getUniqueId());
+
+        FastBoard board = Vanilla.get().getVanillaBoard().getBoards().remove(player.getUniqueId());
+
+        if (board != null) {
+            board.delete();
+        }
     }
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        event.deathMessage(null);
+        event.setDeathMessage(null);
         Player player = event.getEntity();
         Player killer = event.getEntity().getKiller();
 
@@ -55,10 +67,11 @@ public class DataListener implements Listener {
         if (killer != null) {
             PlayerData killerData = PlayerData.getByUuid(player.getUniqueId());
             killerData.setKills(killerData.getKills() + 1);
-            Tasks.runAsync(() -> DatabaseUtils.updateStats(killerData.getUuid(), "kills", killerData.getKills()));
-
-            event.deathMessage(Component.text(CC.translate(Color.GREEN + player.getName() + " &7è stato ucciso nelle grinfie di &c" + killer.getName())));
-        } else {event.deathMessage(Component.text(Color.PURPLE + player.getName() + CC.translate(" &7è morto per causa di " + event.getEntity().getKiller().getName() + "!")));}
+            killerData.save(true);
+            event.setDeathMessage(CC.translate(Color.GREEN + player.getName() + " &7è stato ucciso nelle grinfie di &c" + killer.getName()));
+        } else {
+            event.setDeathMessage(CC.translate("&7E' morto per cause naturali &d" + player.getName()));
+        }
 
 
     }
@@ -70,7 +83,7 @@ public class DataListener implements Listener {
             if (entityDamageByEntityEvent.getDamager() instanceof Player player) {
                 PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
                 playerData.setMobKills(playerData.getMobKills() + 1);
-                Tasks.runAsync(()-> DatabaseUtils.updateStats(playerData.getUuid(), "mobKills", playerData.getMobKills()));
+                playerData.save(true);
             }
         }
     }
@@ -80,7 +93,7 @@ public class DataListener implements Listener {
         Player player = event.getPlayer();
         PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
         playerData.setBlockBroken(playerData.getBlockBroken() + 1);
-        Tasks.runAsync(()-> DatabaseUtils.updateStats(playerData.getUuid(), "blockBroken", playerData.getBlockBroken()));
+        playerData.save(true);
     }
 
 

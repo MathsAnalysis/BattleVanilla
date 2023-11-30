@@ -9,12 +9,15 @@ import it.mathanalisys.vanilla.command.staff.*;
 import it.mathanalisys.vanilla.command.staff.flyboost.FlySpeedCommand;
 import it.mathanalisys.vanilla.command.staff.pvp.PvPManager;
 import it.mathanalisys.vanilla.command.staff.pvp.SetPvPCommand;
+import it.mathanalisys.vanilla.hook.PlaceholderHook;
 import it.mathanalisys.vanilla.leaderboard.LeaderboardManager;
 import it.mathanalisys.vanilla.listener.DataListener;
 import it.mathanalisys.vanilla.listener.GeneralListener;
 import it.mathanalisys.vanilla.provider.AdapterManager;
+import it.mathanalisys.vanilla.provider.VanillaBoard;
 import it.mathanalisys.vanilla.thread.ReduceLagThread;
 import it.mathanalisys.vanilla.utils.ConfigFile;
+import it.mathanalisys.vanilla.utils.PlayerUtils;
 import it.mathanalisys.vanilla.utils.animations.AnimationManager;
 import it.mathanalisys.vanilla.utils.animations.utils.AnimationExecutor;
 import it.mathanalisys.vanilla.utils.animations.utils.tick.Ticker;
@@ -25,6 +28,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.List;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -44,6 +48,8 @@ public class Vanilla extends JavaPlugin {
     private Ticker ticker;
 
     private ConfigFile scoreboardConfig;
+    private VanillaBoard vanillaBoard;
+    private PlaceholderHook placeholderHook;
 
 
     @Override
@@ -76,8 +82,13 @@ public class Vanilla extends JavaPlugin {
     }
 
     private void loadOther(){
-        Bukkit.getCommandMap().register(getName(), new SetPvPCommand());
-        List.of(
+
+        if (Objects.requireNonNull(Bukkit.getPluginManager().getPlugin("PlaceholderAPI")).isEnabled()){
+            this.placeholderHook = new PlaceholderHook();
+            this.placeholderHook.register();
+        }
+
+        PlayerUtils.registerCommands(
                 new StatsCommand(),
                 new LeaderboardCommand(),
                 new WhitelistCommand(),
@@ -89,7 +100,8 @@ public class Vanilla extends JavaPlugin {
                 new FlySpeedCommand(),
                 new RestrictCommand(),
                 new LookUpCommand()
-        ).forEach(command-> Bukkit.getCommandMap().register(getName(), command));
+        );
+
         AnimationExecutor.init(Runtime.getRuntime().availableProcessors());
 
         //Animation Text

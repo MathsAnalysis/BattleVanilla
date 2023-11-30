@@ -57,17 +57,29 @@ public class PlayerData {
             this.deaths = document.getInteger("deaths");
             this.blockBroken = document.getInteger("blockBroken");
         }else {
-            Vanilla.get().getDatabaseManager().getPlayers().insertOne(new Document()
-                    .append("uuid", this.uuid.toString())
-                    .append("name", this.name != null ? this.name : Bukkit.getPlayer(this.uuid) == null ? Bukkit.getOfflinePlayer(this.uuid).getName() : Bukkit.getPlayer(this.uuid).getName())
-                    .append("mobKills", this.mobKills)
-                    .append("kills", this.kills)
-                    .append("deaths", this.deaths)
-                    .append("blockBroken", this.blockBroken)
-            );
+            save();
         }
-        this.loaded = true;
     }
+
+    public void save(boolean async){
+        if(async){
+            Tasks.runAsync(()-> save());
+        }else{
+            save();
+        }
+    }
+
+    private void save(){
+        Document document = new Document();
+        document.append("uuid", this.uuid.toString());
+        document.append("name", this.name != null ? this.name : Bukkit.getPlayer(this.uuid) == null ? Bukkit.getOfflinePlayer(this.uuid).getName() : Bukkit.getPlayer(this.uuid).getName());
+        document.append("mobKills", this.mobKills);
+        document.append("kills", this.kills);
+        document.append("deaths", this.deaths);
+        document.append("blockBroken", this.blockBroken);
+        Vanilla.get().getDatabaseManager().getPlayers().replaceOne(Filters.eq("uuid", this.uuid.toString()), document);
+    }
+
 
     public static PlayerData getByName(String name) {
         return getByUuid(Bukkit.getPlayer(name) == null
