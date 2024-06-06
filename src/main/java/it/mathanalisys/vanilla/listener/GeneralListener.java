@@ -6,6 +6,7 @@ import it.mathanalisys.vanilla.utils.luckperms.LuckPermsUtils;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -13,6 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 
 public class GeneralListener implements Listener {
@@ -22,6 +24,19 @@ public class GeneralListener implements Listener {
         Player player = event.getPlayer();
         LuckPermsUtils.getPrefix(player);
         event.setFormat(CC.translate(LuckPermsUtils.getRankColor(player) + player.getName() + " &8» &7" + event.getMessage()));
+    }
+
+    @EventHandler
+    public void onPlayerBedEnter(PlayerBedEnterEvent event) {
+        if (event.getBedEnterResult() == PlayerBedEnterEvent.BedEnterResult.OK) {
+            World world = event.getPlayer().getWorld();
+            world.setTime(0L);
+            world.setThunderDuration(0);
+            world.setStorm(false);
+            world.setThundering(false);
+            world.setWeatherDuration(0);
+            world.setClearWeatherDuration(0);
+        }
     }
 
     @EventHandler

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="vanilla:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/vanilla_jar</output-path>
+    <root id="archive" name="vanilla.jar">
+      <element id="module-output" name="vanilla.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/fr.minuskube.inv/smart-invs/1.2.7/206ef6f68bc431da7a2dd69bc9ac1f4d5c00272e/smart-invs-1.2.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Revxrsal.Lamp/common/3.2.1/5fdabbe7874aeecca30f8866e3fbe725cf1d74b4/common-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/fr.mrmicky/fastboard/2.1.2/e108e15d3bd844eaed25066a42b3657033343db3/fastboard-2.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Revxrsal.Lamp/bukkit/3.2.1/2caa76d550e470d83a12519e18869753c61b30fb/bukkit-3.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/3.12.14/850383a126cdc5b363fa9ffc780037f6ebeee704/mongo-java-driver-3.12.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.13/7d1178e207e85b8990347d30f9d1d620cad858f4/fastutil-8.5.13.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -56,13 +56,7 @@ public class NameTagHandler {
 	}
 
 	public void reset(Player player, Player other) {
-		if (player == null || other == null) {
-			return;
-		}
-
-		for (Team team : player.getScoreboard().getTeams()) {
-			team.removeEntry(other.getName());
-		}
+        lobby(player, other);
 	}
 
 	public void removeHealthDisplay(Player player) {

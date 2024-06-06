@@ -38,6 +38,48 @@ public class ConfigFile extends YamlConfiguration {
         }
     }
 
+    public void reload() {
+        try {
+            this.load(this.file);
+        } catch (IOException | InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void set(@NotNull String path, @NotNull Object value) {
+        super.set(path, value);
+        this.save();
+    }
+
+    public void setIfNotExists(@NotNull String path, @NotNull Object value) {
+        if (!this.contains(path)) {
+            this.set(path, value);
+        }
+    }
+
+    public void setDefault(@NotNull String path, @NotNull Object value) {
+        if (!this.contains(path)) {
+            this.set(path, value);
+        }
+    }
+
+    public void remove(@NotNull String path) {
+        super.set(path, null);
+        this.save();
+    }
+
+    public void removeIfPresent(@NotNull String path) {
+        if (this.contains(path)) {
+            this.remove(path);
+        }
+    }
+
+    public void removeDefault(@NotNull String path) {
+        if (this.contains(path)) {
+            this.remove(path);
+        }
+    }
+
     @Override
     public int getInt(@NotNull String path) {
         return super.getInt(path, 0);

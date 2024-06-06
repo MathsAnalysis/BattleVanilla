@@ -9,17 +9,13 @@ import java.util.List;
 
 public class CC {
 
-
     public static String translate(String input){
         return ChatColor.translateAlternateColorCodes('&', input);
     }
 
-
     public static String translate(Player player, String input){
         return PlaceholderAPI.setPlaceholders(player, ChatColor.translateAlternateColorCodes('&', input));
     }
-
-
 
     public static List<String> translateStrings(List<String> untranslated){
         List<String> translated = new ArrayList<>();

@@ -36,7 +36,8 @@ public class PlaceholderHook extends PlaceholderExpansion {
 
     @Override
     public String onPlaceholderRequest(Player player, String identifier) {
-        PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
+        PlayerData playerData = PlayerData.getData(player.getUniqueId()).join();
+
 
         switch (identifier){
             case "online" -> {
@@ -59,9 +60,6 @@ public class PlaceholderHook extends PlaceholderExpansion {
             }
             case "broken_blocks"->{
                 return String.valueOf(playerData.getBlockBroken());
-            }
-            case "golden_apple_eaten"->{
-                return String.valueOf(playerData.getGoldenAppleEaten());
             }
             case "mob_kills"->{
                 return String.valueOf(playerData.getMobKills());

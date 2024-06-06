@@ -2,10 +2,8 @@ package it.mathanalisys.vanilla.listener;
 
 import fr.mrmicky.fastboard.FastBoard;
 import it.mathanalisys.vanilla.Vanilla;
-import it.mathanalisys.vanilla.backend.DatabaseUtils;
 import it.mathanalisys.vanilla.backend.PlayerData;
 import it.mathanalisys.vanilla.utils.CC;
-import it.mathanalisys.vanilla.utils.thread.Tasks;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.entity.Entity;
@@ -19,6 +17,10 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
 public class DataListener implements Listener {
 
     @EventHandler
@@ -28,17 +30,21 @@ public class DataListener implements Listener {
         event.setJoinMessage(null);
 
         player.sendMessage("");
-        player.sendMessage(CC.translate("&7Hey, ciao benvenuto nella mia Vanilla &d" + player.getName()));
+        player.sendMessage(CC.translate("&7Hey, ciao benvenuto nella Vanilla dello staff &9" + player.getName()));
         player.sendMessage("");
 
         if(!Bukkit.getOnlinePlayers().isEmpty()){
-            Bukkit.getServer().broadcastMessage(CC.translate("&7Date il benvenuto al giocatore &d" + player.getName()));
+            Bukkit.getServer().broadcastMessage(CC.translate("&7Date il benvenuto al giocatore &9" + player.getName()));
         }
 
         FastBoard fastBoard = new FastBoard(player);
         Vanilla.get().getVanillaBoard().getBoards().put(player.getUniqueId(), fastBoard);
         fastBoard.updateTitle(CC.translate(Vanilla.get().getScoreboardConfig().getString("Scoreboard.Title")));
 
+        ZoneId zoneId = ZoneId.of("Europe/Rome");
+        LocalDateTime localDateTime = LocalDateTime.now(zoneId);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        player.sendMessage("&9Data " + dateTimeFormatter.format(localDateTime));
     }
 
     @EventHandler
@@ -60,17 +66,26 @@ public class DataListener implements Listener {
         Player player = event.getEntity();
         Player killer = event.getEntity().getKiller();
 
-        PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
-        playerData.setDeaths(playerData.getDeaths() + 1);
-        Tasks.runAsync(()-> DatabaseUtils.updateStats(playerData.getUuid(), "deaths", playerData.getDeaths()));
+        PlayerData.getData(player.getUniqueId()).thenAcceptAsync(playerData -> {
+            playerData.setDeaths(playerData.getDeaths() + 1);
+            playerData.save();
+        }).exceptionallyAsync((e) -> {
+            e.printStackTrace();
+            return null;
+        });
 
         if (killer != null) {
-            PlayerData killerData = PlayerData.getByUuid(player.getUniqueId());
-            killerData.setKills(killerData.getKills() + 1);
-            killerData.save(true);
+            PlayerData.getData(player.getUniqueId()).thenAcceptAsync(killerData -> {
+                killerData.setKills(killerData.getKills() + 1);
+                killerData.save();
+            }).exceptionallyAsync((e) -> {
+                e.printStackTrace();
+                return null;
+            });
+
             event.setDeathMessage(CC.translate(Color.GREEN + player.getName() + " &7è stato ucciso nelle grinfie di &c" + killer.getName()));
         } else {
-            event.setDeathMessage(CC.translate("&7E' morto per cause naturali &d" + player.getName()));
+            event.setDeathMessage(CC.translate("&7E' morto per cause naturali &9" + player.getName()));
         }
 
 
@@ -81,9 +96,14 @@ public class DataListener implements Listener {
         Entity eventEntity = event.getEntity();
         if (eventEntity.getLastDamageCause() instanceof EntityDamageByEntityEvent entityDamageByEntityEvent) {
             if (entityDamageByEntityEvent.getDamager() instanceof Player player) {
-                PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
-                playerData.setMobKills(playerData.getMobKills() + 1);
-                playerData.save(true);
+
+                PlayerData.getData(player.getUniqueId()).thenAcceptAsync(playerData -> {
+                    playerData.setMobKills(playerData.getMobKills() + 1);
+                    playerData.save();
+                }).exceptionallyAsync((e) -> {
+                    e.printStackTrace();
+                    return null;
+                });
             }
         }
     }
@@ -91,9 +111,13 @@ public class DataListener implements Listener {
     @EventHandler
     public void onPlayerBreak(BlockBreakEvent event){
         Player player = event.getPlayer();
-        PlayerData playerData = PlayerData.getByUuid(player.getUniqueId());
-        playerData.setBlockBroken(playerData.getBlockBroken() + 1);
-        playerData.save(true);
+        PlayerData.getData(player.getUniqueId()).thenAcceptAsync(playerData -> {
+            playerData.setBlockBroken(playerData.getBlockBroken() + 1);
+            playerData.save();
+        }).exceptionallyAsync((e) -> {
+            e.printStackTrace();
+            return null;
+        });
     }
 
 

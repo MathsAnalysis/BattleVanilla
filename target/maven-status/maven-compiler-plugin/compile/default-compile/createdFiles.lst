@@ -56,3 +56,4 @@ it\mathanalisys\vanilla\command\LeaderboardCommand.class
 it\mathanalisys\vanilla\utils\animations\utils\scheduler\RunnableTask.class
 it\mathanalisys\vanilla\listener\DataListener.class
 it\mathanalisys\vanilla\command\staff\SpeedCommand.class
+it\mathanalisys\vanilla\command\staff\VanillaReloadConfigCommand.class

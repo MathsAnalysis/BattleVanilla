@@ -96,6 +96,7 @@ public class Vanilla extends JavaPlugin {
                 new TrollCommand(),
                 new GamemodeCommand(),
                 new SetPvPCommand(),
+                new VanillaReloadConfigCommand(),
                 new TeleportCommand(),
                 new FlySpeedCommand(),
                 new RestrictCommand(),

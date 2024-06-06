@@ -11,7 +11,7 @@ public class WorldRunnable implements Runnable {
     @Override
     public void run() {
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (Bukkit.getOnlinePlayers().size() == 0) {
+            if (Bukkit.getOnlinePlayers().isEmpty()) {
                 return;
             }
 

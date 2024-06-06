@@ -1,14 +1,16 @@
 package it.mathanalisys.vanilla.backend;
 
 import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.ReplaceOptions;
 import it.mathanalisys.vanilla.Vanilla;
-import it.mathanalisys.vanilla.utils.thread.Tasks;
 import lombok.Data;
 import org.bson.Document;
 import org.bukkit.Bukkit;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @Data
 @SuppressWarnings("all")
@@ -21,9 +23,9 @@ public class PlayerData {
     private UUID uuid;
     private String name;
 
-    private int kills, deaths,
-            mobKills, blockBroken,
-            goldenAppleEaten;
+    private LocalDateTime localDateTime;
+
+    private int kills, deaths, mobKills, blockBroken;
 
     public PlayerData(UUID uuid, String name){
         this.uuid = uuid;
@@ -39,63 +41,81 @@ public class PlayerData {
     }
 
     public void load(boolean async) {
-        if(async) {
-            Tasks.runAsync(()-> loadData());
-        } else {
-            loadData();
-        }
+        CompletableFuture.runAsync(this::loadData).exceptionallyAsync((e)-> {
+            e.printStackTrace();
+            return null;
+        });
     }
 
     public void loadData() {
-        Document document = Vanilla.get().getDatabaseManager().getPlayers().find(Filters.eq("uuid", this.uuid.toString())).first();
-        if (document != null) {
-            if (this.name == null) {
-                this.name = document.getString("name");
+        Document document = Vanilla.get().getDatabaseManager().getPlayers().find(Filters.eq("_id", this.uuid.toString())).first();
+
+        if (document == null){
+            name = Bukkit.getPlayer(uuid) != null ? Bukkit.getPlayer(uuid).getName() : Bukkit.getOfflinePlayer(uuid).getName();
+            this.save();
+            return;
+        }
+
+        this.name = document.getString("name");
+        this.mobKills = document.getInteger("mobKills");
+        this.kills = document.getInteger("kills");
+        this.deaths = document.getInteger("deaths");
+        this.blockBroken = document.getInteger("blockBroken");
+        this.localDateTime = LocalDateTime.parse(document.getString("localDateTime"));
+    }
+
+    public void save(){
+        CompletableFuture.runAsync(this::saveData).exceptionallyAsync((e)-> {
+            e.printStackTrace();
+            return null;
+        });
+    }
+
+    protected void saveData(){
+        Vanilla.get().getDatabaseManager().getPlayers().replaceOne(Filters.eq("_id", this.uuid.toString()), toDocument(), new ReplaceOptions().upsert(true));
+    }
+
+
+    public Document toDocument(){
+        return new Document()
+                .append("uuid", this.uuid.toString())
+                .append("name", this.name)
+                .append("mobKills", this.mobKills)
+                .append("kills", this.kills)
+                .append("deaths", this.deaths)
+                .append("localDateTime", this.localDateTime.toString())
+                .append("blockBroken", this.blockBroken);
+    }
+
+
+    public static CompletableFuture<PlayerData> getData(String name){
+        return CompletableFuture.supplyAsync(()-> {
+            PlayerData playerData = datas.values().stream().filter(data -> data.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
+
+            if(playerData == null){
+                Document document = Vanilla.get().getDatabaseManager().getPlayers().find(Filters.eq("name", name)).first();
+
+                if(document == null){
+                    return null;
+                }
+
+                playerData = new PlayerData(UUID.fromString(document.getString("_id")), document.getString("name"));
             }
-            this.mobKills = document.getInteger("mobKills");
-            this.kills = document.getInteger("kills");
-            this.deaths = document.getInteger("deaths");
-            this.blockBroken = document.getInteger("blockBroken");
-        }else {
-            save();
-        }
+
+            return playerData;
+        });
     }
 
-    public void save(boolean async){
-        if(async){
-            Tasks.runAsync(()-> save());
-        }else{
-            save();
-        }
-    }
+    public static CompletableFuture<PlayerData> getData(UUID uuid) {
+        return CompletableFuture.supplyAsync(()-> {
+            PlayerData playerData = datas.get(uuid);
 
-    private void save(){
-        Document document = new Document();
-        document.append("uuid", this.uuid.toString());
-        document.append("name", this.name != null ? this.name : Bukkit.getPlayer(this.uuid) == null ? Bukkit.getOfflinePlayer(this.uuid).getName() : Bukkit.getPlayer(this.uuid).getName());
-        document.append("mobKills", this.mobKills);
-        document.append("kills", this.kills);
-        document.append("deaths", this.deaths);
-        document.append("blockBroken", this.blockBroken);
-        Vanilla.get().getDatabaseManager().getPlayers().replaceOne(Filters.eq("uuid", this.uuid.toString()), document);
-    }
+            if(playerData == null){
+                playerData = new PlayerData(uuid);
+            }
 
-
-    public static PlayerData getByName(String name) {
-        return getByUuid(Bukkit.getPlayer(name) == null
-                ? Bukkit.getOfflinePlayer(name).getUniqueId()
-                : Bukkit.getPlayer(name).getUniqueId());
-    }
-
-    public static PlayerData getByUuid(UUID uuid) {
-        PlayerData data = datas.get(uuid);
-
-        if (data == null) {
-            data = new PlayerData(uuid);
-            data.load(true);
-        }
-
-        return data;
+            return playerData;
+        });
     }
 
     public static HashMap<UUID, PlayerData> getDatas() {

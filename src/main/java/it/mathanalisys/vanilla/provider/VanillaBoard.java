@@ -18,9 +18,7 @@ public class VanillaBoard extends BukkitRunnable {
 
     @Override
     public void run() {
-        for (FastBoard board : this.boards.values()) {
-            scoreboardUpdate(board);
-        }
+        this.boards.values().forEach(this::scoreboardUpdate);
     }
 
     public void scoreboardUpdate(FastBoard board){
