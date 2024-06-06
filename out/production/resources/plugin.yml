@@ -1,0 +1,5 @@
+name: Vanilla
+main: it.mathanalisys.vanilla.Vanilla
+version: 0.3
+api-version: 1.16
+soft-depend: [PlaceholderAPI, LuckPerms]

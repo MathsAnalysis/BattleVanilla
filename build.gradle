@@ -1,0 +1,83 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id "com.github.johnrengelman.shadow" version "8.1.1"
+}
+
+group = 'it.mathsanalysis.vanilla'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
+repositories {
+    mavenCentral()
+    maven {url = 'https://jitpack.io'}
+    maven {url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'}
+    maven {url 'https://repo.xenondevs.xyz/releases'}
+}
+
+dependencies {
+    compileOnly 'net.luckperms:api:5.4'
+
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'fr.mrmicky:fastboard:2.1.2'
+    
+    implementation 'com.github.Revxrsal.Lamp:bukkit:3.2.1'
+    implementation 'com.github.Revxrsal.Lamp:common:3.2.1'
+
+    implementation 'it.unimi.dsi:fastutil:8.5.13'
+    implementation "xyz.xenondevs.invui:invui:1.31"
+    implementation 'org.mongodb:mongo-java-driver:3.12.14'
+}
+
+tasks {
+    compileJava {
+        dependsOn clean
+        options.encoding = 'UTF-8'
+    }
+
+    build {
+        dependsOn shadowJar
+        dependsOn publishToMavenLocal
+    }
+}
+
+shadowJar {
+    archiveFileName = 'vanilla-bukkit.jar'
+    relocate('fr.mrmicky.fastboard', 'it.obsmc.vanilla.fastboard')
+    relocate('fr.minuskube.inv', 'it.obsmc.vanilla.inv')
+    relocate('com.github.Revxrsal.Lamp', 'it.obsmc.vanilla.lamp')
+    minimize()
+}
+
+jar{
+    archiveFileName = 'vanilla-bukkit.jar'
+}
+
+
+
+processResources {
+    filteringCharset 'UTF-8'
+    def commitId = 'git rev-parse --short HEAD'.execute().text.trim();
+    expand 'GIT_COMMIT_HASH': commitId
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'it.mathsanalysis.vanilla'
+            artifactId = 'vanilla-bukk'
+            version = '1.0-SNAPSHOT'
+            from components.java
+        }
+
+    }
+}
